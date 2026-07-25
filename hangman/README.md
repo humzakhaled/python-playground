@@ -19,4 +19,4 @@ of the hangman art. Guess the full word to win.
 - Using `while`/`for` loops to manage game state and build output
 - String methods (`.lower()`, `.isalpha()`, `.join()`) for input handling
 - Importing from a local module (`hangman_art.py`)
-- Containerizing a Python app with Docker
+- Containerizing Python app with Docker
