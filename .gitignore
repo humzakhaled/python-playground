@@ -1,0 +1,10 @@
+# Python temporary cache
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+
+# Virtual environments
+venv/
+.venv/
