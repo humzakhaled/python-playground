@@ -4,4 +4,4 @@ A collection of Python projects and exercises.
 
 ## Projects
 
-- [`hangman/`](./hangman) — CLI Hangman game with ASCII art, runs in Docker
+- [`hangman/`](./hangman) — Interactive CLI Hangman game with ASCII art.
