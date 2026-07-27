@@ -1,3 +1,18 @@
+def find_highest_bidder(bidding_record):
+    # Calculates and prints the highest bidder from a dictionary of bids.
+    highest_bid = 0
+    winner = ""
+
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+
+    print("\n--- Auction Finished ---")
+    print(f"The winner is {winner} with a bid amount of ${highest_bid}!")
+
+
 bidders = {}
 bidding_finished = False
 
@@ -28,14 +43,5 @@ while not bidding_finished:
     if should_continue == "no":
         bidding_finished = True
 
-highest_bid = 0
-winner = ""
-
-for bidder in bidders:
-    bid_amount = bidders[bidder]
-    if bid_amount > highest_bid:
-        highest_bid = bid_amount
-        winner = bidder
-
-print("\n--- Auction Finished ---")
-print(f"The winner is {winner} with a bid amount of ${highest_bid}!")
+# Call the function with your dictionary of bidders
+find_highest_bidder(bidders)
