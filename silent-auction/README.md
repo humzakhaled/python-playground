@@ -1,6 +1,6 @@
 ## 🔑 Silent Auction
 
-A simple command-line program that collects bids from multiple users in a secret auction, validates input, and finds the highest bidder.
+A simple command-line program that collects bids from multiple users in a secret auction, validates input and finds the highest bidder.
 
 ## 🚀 How to Run
 
