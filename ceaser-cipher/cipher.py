@@ -39,3 +39,5 @@ if direction == "encode":
     encrypt(text, shift)
 elif direction == "decode":
     decrypt(text, shift)
+else
+    print("Invalid input. Please type 'encode' or 'decode'.")
