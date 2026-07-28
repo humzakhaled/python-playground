@@ -1,7 +1,5 @@
 from art import logo
 
-print(logo)
-
 def add(n1, n2):
     return n1 + n2
 
@@ -44,20 +42,48 @@ def get_an_operation():
         print('Error: Please select one of the allowed operations.')
 
 # Main program execution
-n1 = get_a_number('Enter the first number: ')
-operation_symbol = get_an_operation()
+def calculator():
+    print(logo)
+    is_running = True
+    while is_running:
+        n1 = get_a_number('Enter the first number: ')
+        should_continue = True
 
-# Keep asking for n2 until its not zero in case the user chose is division
-while True:
-    n2 = get_a_number('Enter the second number: ')
-    if operation_symbol == '/' and n2 == 0:
-        print("Error: You cannot divide by zero. Please enter a non-zero number.")
-    else:
-        break
+        while should_continue:
+            operation_symbol = get_an_operation()
 
-# Perform calculation
-calculation_function = operations[operation_symbol]
-answer = calculation_function(n1, n2)
+            # Keep asking for n2 until its not zero in case the user chose is division
+            while True:
+                n2 = get_a_number('Enter the second number: ')
+                if operation_symbol == '/' and n2 == 0:
+                    print("Error: You cannot divide by zero. Please enter a non-zero number.")
+                else:
+                    break
 
-# Show answer rounded to 1 decimal place
-print(f"{n1} {operation_symbol} {n2} = {answer:.1f}")
+            # Perform calculation
+            calculation_function = operations[operation_symbol]
+            answer = calculation_function(n1, n2)
+
+            # Show answer rounded to 1 decimal place
+            print(f"{n1} {operation_symbol} {n2} = {answer:.1f}")
+
+            # Ask the user if they want to continue
+            while True:
+                choice = input(
+                    f"Type 'y' to continue calculating with {answer:.2f}, 'n' to start a new calculation, or 'e' to exit: "
+                ).lower().strip()
+
+                if choice in ['y', 'n', 'e']:
+                    break
+                print("Error: Invalid choice. Please enter 'y', 'n', or 'e'.")
+
+            if choice == "y":
+                n1 = answer
+            elif choice == "n":
+                should_continue = False
+            elif choice == "e":
+                should_continue = False
+                is_running = False
+                print("Goodbye!")
+                
+calculator()
