@@ -11,3 +11,4 @@ A collection of Python projects and exercises.
 - [`blackjack/`](./blackjack) — CLI Blackjack game played against an automated dealer following standard house rules.
 - [`number_guessing/`](./number_guessing) — CLI game where the player guesses a random number between 1 and 100 on easy or hard mode.
 - [`higher_lower/`](./higher_lower) — CLI game where the player guesses which account has more Instagram followers.
+- [`coffee_machine/`](./coffee_machine) — CLI coffee machine for brewing drinks and managing shop inventory and payments.
